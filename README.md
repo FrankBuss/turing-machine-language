@@ -1,5 +1,5 @@
 # TMSL
-This project is based on https://code.google.com/archive/p/turing-machine-language/ The manual for it is [here](https://www.cs.columbia.edu/~sedwards/classes/2008/w4115-fall/reports/TMSL.pdf), and also copied in the repository as [TMSL.pdf](TMSL.pdf).
+This project is based on https://code.google.com/archive/p/turing-machine-language/ created by Isaac McGarvey, Joshua Gordon, Keerti Joshi, and Snehit Prabhu. The manual for it is [here](https://www.cs.columbia.edu/~sedwards/classes/2008/w4115-fall/reports/TMSL.pdf), and also copied in the repository as [TMSL.pdf](TMSL.pdf).
 
 # Compiler
 The TMSL compiler can be compiled like this:
