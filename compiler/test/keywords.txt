@@ -1,0 +1,14 @@
+1, abc, 0
+
+left
+right
+write 1
+write _
+write abc
+exit
+if(0){}
+if(_){}
+if(0,1,_){}
+while(0){}
+while(_){}
+while(0,1,_){}

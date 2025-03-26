@@ -1,0 +1,48 @@
+/* multiplys two urnary numbers */
+/* input form 0^m 1 0^n 1 */
+/* output form 0^(m+n) */
+
+0, 1, x
+
+while (0)
+{
+	write _
+	right
+	until (1) right
+	right
+	
+	/* begin copy */
+	while (0)
+	{
+		write x
+		until (_) right
+		write 0
+		until (x) left
+		right
+	}
+	left
+	while (x)
+	{
+		write 0
+		left
+	}
+	/* end copy */
+	
+	left
+	if (0)
+	{ 
+		until (_) left
+		right
+	}
+	else
+	{
+		right
+		write _
+		until (1)
+		{
+			write _
+			right
+		}
+		write _
+	}
+}

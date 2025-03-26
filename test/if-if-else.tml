@@ -1,0 +1,16 @@
+0,1,correct,incorrect
+
+write correct
+if (0)
+	if (1)
+		write incorrect
+	else
+		write incorrect
+
+right
+write 0
+if (0)
+	if (1)
+		write incorrect
+	else
+		write correct

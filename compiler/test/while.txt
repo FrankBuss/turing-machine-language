@@ -1,0 +1,5 @@
+0,1
+write 0
+while(0){
+	write 1
+}

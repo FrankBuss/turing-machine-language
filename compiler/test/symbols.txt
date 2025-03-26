@@ -1,0 +1,7 @@
+1, 123, abc, a1
+
+write 1
+write _
+write 123
+write abc
+write a1

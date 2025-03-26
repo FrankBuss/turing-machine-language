@@ -1,0 +1,4 @@
+0,1
+write 0
+exit
+write 1

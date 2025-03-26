@@ -1,0 +1,5 @@
+0,1
+until (1){
+	write 1
+	right
+}

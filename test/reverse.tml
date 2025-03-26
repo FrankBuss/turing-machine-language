@@ -1,0 +1,33 @@
+0,1,x
+
+while (0,1) right
+
+write x
+
+until (_)
+{
+	while (x) left
+
+	if (0)
+	{
+		write x
+		until(_) right
+		write 0
+	}
+	else if (1)
+	{
+		write x
+		until (_) right
+		write 1
+	}
+
+	while (0,1) left
+}
+
+right
+
+while (x)
+{
+	write _
+	right
+}

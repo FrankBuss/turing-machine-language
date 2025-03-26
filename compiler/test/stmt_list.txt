@@ -1,0 +1,9 @@
+1, 0
+
+left
+right
+write 1
+exit
+if(0){}
+while(0){}
+exit

@@ -1,0 +1,5 @@
+0,1,2
+write 1
+unless (0){
+	write 2
+}

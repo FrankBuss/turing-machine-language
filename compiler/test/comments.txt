@@ -1,0 +1,11 @@
+symbol1
+
+/* i'm a comment */
+/* i'm a 
+multi
+line comment
+with keywords
+WRITE
+write l
+left
+*/

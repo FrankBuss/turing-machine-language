@@ -1,0 +1,1 @@
+0,1while (1) {	if (1) {		write _		right		while (1) {			right		}		while (0) {			right		}		if (1) {			write 0 		}		while (0,1) {			left		}		right	}}leftleftwhile (0,1) {	left}write 1
