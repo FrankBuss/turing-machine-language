@@ -1,27 +1,48 @@
-{ open Parser }
+{
+  open Parser
+  exception Lexer_error of string
+}
 
 rule token = parse
-| "if" { IF } 
+| [' ' '\t' '\r' '\n'] { token lexbuf }
+| "/*" { comment lexbuf }
+| "if" { IF }
 | "else" { ELSE }
 | "unless" { UNLESS }
 | "while" { WHILE }
 | "until" { UNTIL }
-| "left" { LEFT } 
+| "left" { LEFT }
 | "right" { RIGHT }
 | "write" { WRITE }
 | "exit" { EXIT }
-| "else" { ELSE }
-| '(' { LPAREN } 
+| "def" { DEF }
+| '(' { LPAREN }
 | ')' { RPAREN }
-| '{' { LBRACE } 
+| '{' { LBRACE }
 | '}' { RBRACE }
-| (('_')  | (['a'-'z''A'-'Z''0'-'9']+)) as lxm { SYMBOL(lxm) } (* blanks are special symbols which should never be concatenated *)
 | ',' { COMMA }
-| [' ' '\t' '\r' '\n'] { token lexbuf }
-| "/*" { comment lexbuf }
 | eof { EOF }
-| _ as char { raise (Failure("illegal character " ^ Char.escaped char)) }
+| "_" { SYMBOL("_") }
+| ['a'-'z' 'A'-'Z' '0'-'9'] ['a'-'z' 'A'-'Z' '0'-'9' '_']* as lex {
+    match lex with
+    | "if" -> IF
+    | "else" -> ELSE
+    | "unless" -> UNLESS
+    | "while" -> WHILE
+    | "until" -> UNTIL
+    | "left" -> LEFT
+    | "right" -> RIGHT
+    | "write" -> WRITE
+    | "exit" -> EXIT
+    | "def" -> DEF
+    | _ -> SYMBOL(lex)  (* All identifiers treated as SYMBOL tokens *)
+}
+| _ as char { 
+    let msg = Printf.sprintf "error: illegal character '%c' at offset %d" 
+                char (Lexing.lexeme_start lexbuf) in
+    raise (Lexer_error msg)
+}
 
 and comment = parse
-"*/" { token lexbuf } (* we had issues ending comments with newline due to variet in operating systems so went with c-style comments insteads *)
+| "*/" { token lexbuf }
 | _ { comment lexbuf }

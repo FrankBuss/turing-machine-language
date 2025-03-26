@@ -1,0 +1,31 @@
+/* Test for function definitions and calls */
+0, 1, 2, x, y, u
+
+/* Define a function to write the symbol x and move right */
+def write_x_and_move(val) {
+    write x
+    right
+    write val
+    right
+}
+
+/* Define a function with no parameters */
+def write_y() {
+    write y
+    right
+}
+
+/* Define a function that calls other functions */
+def write_pattern(sym) {
+    write sym
+    right
+    write_x_and_move(sym)
+    write_y()
+}
+
+/* Main program */
+write 0
+right
+write_pattern(1)
+write 2
+write_y()

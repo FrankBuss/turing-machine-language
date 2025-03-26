@@ -31,7 +31,7 @@ for source in $sources; do
     ((tests++))
     rm -f error
     if ! ../compiler/compiler.exe "$source" tmp.tm 2>error; then
-        if grep -q "error" error; then
+        if grep -qi "error" error; then
             echo "Test succeeded: $source"
             ((successes++))
         else
