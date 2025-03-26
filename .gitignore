@@ -27,3 +27,21 @@ setup.log
 
 # Local OPAM switch
 _opam/
+
+# other generated files
+code.tm
+compiler/compiler.exe
+compiler/parser.ml
+compiler/parser.mli
+compiler/scanner.ml
+machine/machine.exe
+machine/parser.ml
+machine/parser.mli
+machine/scanner.ml
+machine/tape_parser.ml
+machine/tape_parser.mli
+machine/tape_scanner.ml
+output.txt
+test/error
+test/tmp.output
+test/tmp.tm
