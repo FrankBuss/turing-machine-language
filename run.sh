@@ -17,4 +17,10 @@ echo ""
 echo "Output tape:"
 cat "$3"
 echo ""
+echo "Compressed input tape:"
+cat "$2" | tr -d ' ' | tr '.' ' '
+echo ""
+echo "Compressed output tape:"
+cat "$3" | tr -d ' ' | tr '.' ' '
+echo ""
 echo "Done - have a nice day. Thank you for using the run script(tm)."
