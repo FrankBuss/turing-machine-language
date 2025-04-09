@@ -83,7 +83,7 @@ stmt:
 opt_symbol_list:
     { [] }
   | symbol_list
-    { $1 }
+    { List.rev $1 }
 
 block:
   LBRACE stmt_list RBRACE
